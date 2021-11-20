@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap');
+body {
+    --text-color: #121C33;
+    --bkg-color: #F5F5F5;
+  }
+  body.dark-theme {
+    --text-color: #F5F5F5;
+    --bkg-color: #121C33;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+      --text-color: #F5F5F5;
+      --bkg-color: #121C33;
+    }
+    body.light-theme {
+      --text-color: #121C33;
+      --bkg-color: #F5F5F5;
+    }
+  }
+  
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--bkg-color);
+    color: var(--text-color)
+  }
+  
